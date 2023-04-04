@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
 @import "./navbar.css";
 @import "./home.css";
+@import "./popups.css";
 
 *{
     margin: 0;
