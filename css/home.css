@@ -41,8 +41,9 @@
     .recent-history{
         margin: 3vh 0 ;
         position: fixed;
-        height: 50vh;
+        height: 45vh;
         width: 90%;
+        top: 40vh;
         bottom: 10vh;
         overflow-y: scroll;
 
