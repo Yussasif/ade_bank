@@ -2,10 +2,11 @@
 
     .navbar{
         background-color: whitesmoke;
-        position: absolute;
+        position: fixed;
         width: 100%;
         top: 90vh;
         border-top: 1px solid #007aff;
+        z-index: 1;
 
     }
     .navbar ul{
