@@ -2,7 +2,7 @@
 
     .navbar{
         background-color: whitesmoke;
-        position: fixed;
+        position: absolute;
         width: 100%;
         top: 90vh;
         border-top: 1px solid #007aff;
