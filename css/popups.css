@@ -50,8 +50,9 @@
         font-weight: bold;
         z-index: 1;
         border-radius: 25px;
+        animation: shake 1s infinite;
 
-        display: none;
+        /* display: none; */
         
         
     }
@@ -69,4 +70,14 @@
         border: 1px solid red;
     }
 
+
+
+
     }
+    @keyframes shake {
+        0% { transform: translateX(0) }
+        25% { transform: translateX(5px) }
+        50% { transform: translateX(-5px) }
+        75% { transform: translateX(5px) }
+        100% { transform: translateX(0) }
+       }
