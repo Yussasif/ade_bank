@@ -1,0 +1,24 @@
+@media screen and (max-width: 500px) {
+
+    .navbar{
+        background-color: whitesmoke;
+        position: absolute;
+        width: 100%;
+        top: 90vh;
+        border-top: 1px solid #007aff;
+
+    }
+    .navbar ul{
+        display: flex;
+        height: 10vh;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .navbar ul li{
+        list-style-type: none;
+    }
+    .navbar ul li a{
+        text-decoration: none;
+        color: #007aff;
+    }
+}

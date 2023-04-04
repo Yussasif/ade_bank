@@ -1,0 +1,22 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+@import "./navbar.css";
+@import "./home.css";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+@media screen and (min-width: 501px) {
+    body{
+        background-color: red;
+        display: none;
+    }
+}
+@media screen and (max-width: 500px) {
+    body{
+        font-family: 'Poppins', sans-serif;
+    }
+}
