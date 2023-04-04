@@ -4,7 +4,7 @@
         background-color: whitesmoke;
         position: absolute;
         width: 100%;
-        top: 90vh;
+        bottom: 0vh;
         border-top: 1px solid #007aff;
         z-index: 1;
 
