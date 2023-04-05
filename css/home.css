@@ -10,7 +10,8 @@
     }
     .greet h2{
         margin-left: 3vw;
-        font-size: 3.5vw;
+        font-size: 4vw;
+        color: #0000ff;
     }
 
     .balance{
@@ -72,6 +73,11 @@
         bottom: 10vh;
         overflow-y: scroll;
 
+    }
+    .recent-history h4{
+        font-size: 4vw;
+        margin-bottom: 2vh;
+        color: #0000ff;
     }
     .transactions{
         display: flex;
