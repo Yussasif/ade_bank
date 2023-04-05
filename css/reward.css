@@ -1,0 +1,122 @@
+.reward{
+    padding: 2vh 3vh;
+
+}
+.reward-nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #0000ff;
+    /* position: fixed; */
+    z-index: 1;
+
+}
+.container{
+    width: 100%;
+    border-radius: 10px;
+    background-color: #edebeb;
+    padding: 2vh 3vw;
+    box-shadow: inset -5px -5px 2px 0 rgba(77, 75, 75, 0.107),
+    inset 5px 5px 2px 0 rgba(255, 255, 255, 0.763);
+}
+.top-cont{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.cashback-cont, .voucher-cont{
+    padding: 2vh 3vw;
+    border-radius: 10px;
+    box-shadow: inset 4px 4px 4px 0 rgba(77, 75, 75, 0.163),
+                     inset -5px -5px 4px 0 rgba(255, 255, 255, 0.616);
+    
+    margin: 2vh 2vw;
+    width: 45%;
+}
+.cashback-cont p, .voucher-cont p{
+    font-size: 4vw;
+    color: gray;
+    margin-bottom: 1vh;
+}
+.total-cashback-cont, .total-voucher-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.total-reward, .total-voucher{
+    max-width: 80%;
+    color: #0000ff;
+    font-size: 4vw;
+}
+.middle-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cashback-text h4{
+    color: black;
+    font-size: 3vw;
+
+}
+.cashback-text p{
+    color: gray;
+    font-size: 2.5vw;
+}
+.cashback-text p span{
+    color: #0000ff;
+}
+.reminder-cont p{
+    font-size: 3vw;
+    border: 1px solid #0000ff;
+    background: none;
+    padding: 0vh 2vw;
+    color: #0000ff;
+    border-radius: 50px;
+}
+.reward-amount-cont{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+.reward-amount-cont::-webkit-scrollbar{
+    display: none;
+}
+.each-reward{
+    max-width: 13%;
+
+    margin: 1vh 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.each-reward .amount{
+    font-size: 2.5vw;
+    padding: 1.5vh 0;
+    line-height: 1;
+    border-radius: 50%;
+    color: #0000ff;
+    text-align: center;
+    background-color: rgba(21, 25, 226, 0.062);
+}
+.each-reward .date{
+    font-size: 3vw;
+    color: gray;
+}
+.claim-btn-cont{
+    width: 100%;
+    background-color: #0000ff;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh 0;
+}
+.claim-btn-cont p{
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    font-size: 3.5vw;
+}
