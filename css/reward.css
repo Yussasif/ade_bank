@@ -35,9 +35,11 @@
     width: 45%;
 }
 .cashback-cont p, .voucher-cont p{
-    font-size: 4vw;
+    font-size: 3.5vw;
     color: gray;
     margin-bottom: 1vh;
+    white-space: nowrap;
+
 }
 .total-cashback-cont, .total-voucher-cont{
     display: flex;
