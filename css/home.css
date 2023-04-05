@@ -63,6 +63,7 @@
     .transactions{
         display: flex;
         justify-content: space-between;
+
         /* height: 45px; */
         /* width: 100%; */
         /* margin-top: 3vh; */
@@ -70,6 +71,7 @@
         padding: 1vh 3vw;
         box-shadow: inset -5px -5px 2px 0 rgba(77, 75, 75, 0.107),
                     inset 5px 5px 2px 0 rgba(255, 255, 255, 0.763);
+        align-items: center;
 
     }
     .trans-type-cont{
@@ -103,13 +105,13 @@
     }
 
     .debit-transaction{
-        border-bottom: 1px solid red;
+        /* border-bottom: 1px solid red; */
     }
     .credit-transaction{
-        border-bottom: 1px solid green;
+        /* border-bottom: 1px solid green; */
     }
     .loan-transaction{
-        border-bottom: 1px solid #0700c4;
+        /* border-bottom: 1px solid #0700c4; */
     }
     .credit-transaction .transaction-amount{
         color: green;
