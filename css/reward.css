@@ -123,3 +123,25 @@
     font-weight: 600;
     font-size: 3.5vw;
 }
+.ads{
+    height: 100px;
+    background-color: #0f12ad13;
+    padding: 2vh 3vw;
+    margin: 2vh 0;
+}
+.ads h4{
+    font-size: 4.5vw;
+}
+.ads p{
+    color: black;
+    font-size: 2.7vw;
+    margin-bottom: 2vh;
+}
+.ads button{
+    background: #0000ff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 1vh 2vw;
+    width: 100px;
+}
