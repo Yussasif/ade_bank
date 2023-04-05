@@ -51,9 +51,14 @@
     .transactions{
         display: flex;
         justify-content: space-between;
-        height: 45px;
+        align-items: center;
+        height: 50px;
         /* width: 100%; */
-        margin-top: 3vh;
+        padding: 1vh 2vw;
+        margin-top: 0.5vh;
+        border-radius: 5px;
+        background-color: whitesmoke;
+        box-shadow: 2px 2px 2px rgb(206, 203, 203);
     }
     .trans-type-cont{
         max-width: 20%;
@@ -84,13 +89,13 @@
     }
 
     .debit-transaction{
-        border-bottom: 1px solid red;
+        /* border-bottom: 1px solid red; */
     }
     .credit-transaction{
-        border-bottom: 1px solid green;
+        /* border-bottom: 1px solid green; */
     }
     .loan-transaction{
-        border-bottom: 1px solid #0700c4;
+        /* border-bottom: 1px solid #0700c4; */
     }
     .credit-transaction .transaction-amount{
         color: green;
