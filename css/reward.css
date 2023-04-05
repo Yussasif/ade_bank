@@ -126,6 +126,10 @@
 .ads{
     height: 100px;
     background-color: #0f12ad13;
+    background-image: url(../img/bonus.png);
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    background-position: right;
     padding: 2vh 3vw;
     margin: 2vh 0;
 }
@@ -135,10 +139,10 @@
 .ads p{
     color: black;
     font-size: 2.7vw;
-    margin-bottom: 2vh;
+    margin-bottom: 10px;
 }
 .ads button{
-    background: #0000ff;
+    background-color: #0000ff;
     color: white;
     border: none;
     border-radius: 50px;
