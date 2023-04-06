@@ -1,5 +1,6 @@
 .invest{
     padding: 2vh 3vh;
+    margin-bottom: 15vh;
 
 }
 .invest-nav{
@@ -57,8 +58,8 @@
     max-width: 65%;
 }
 .invest-ads button{
-    background-color: #0022ff13;
-    border: 1px solid #0000ff;
+    background-color: #ffa20052;
+    border: 1px solid #ffa600;
     color: #0000ff;
     font-size: 3vw;
     border-radius: 5px;
