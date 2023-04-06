@@ -156,10 +156,11 @@
 }
 .bonus-history{
     padding: 2vh 3vw;
-    height: 500px;
+    /* height: 500px; */
     background-color: #e9e5e5;
     box-shadow: inset -5px -5px 2px 0 rgba(77, 75, 75, 0.107),
     inset 5px 5px 2px 0 rgba(255, 255, 255, 0.763);
+    margin-bottom: 15vh;
 }
 .history-text{
     display: flex;
@@ -174,4 +175,73 @@
 .history-text p{
     font-size: 3.5vw;
     color: gray;
+}
+.time-limited-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2vh;
+}
+.time-limited-cont h5{
+    font-size: 3.5vw;
+}
+.time-limited-cont .line{
+    background-color: #0000ff;
+    width: 20px;
+    height: 2px;
+    border-radius: 50px;
+   
+    margin-top: 5px;
+}
+.time-limited-reward{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 1px solid rgb(201, 195, 195);
+    padding-bottom: 1.5vh;
+    margin-bottom: 2vh;
+}
+.side-img{
+width: 15%;
+height: 40px;
+background-color: #0000ff28;
+border-radius: 50%;
+border: 1px solid #0000ff;
+}
+.time-limited-reward .text{
+    max-width: 50%;
+}
+.text h4{
+    font-size: 4vw;
+    margin-bottom: 2px;
+    color: rgb(83, 81, 81);
+
+}
+.text p{
+    font-size: 3vw;
+    color: gray;
+}
+.side-button-cont{
+    max-width: 40%;
+    justify-content: center;
+    align-items: center;
+}
+.side-button-cont p{
+    font-size: 3vw;
+    font-weight: bold;
+    color: #0000ff;
+}
+.side-button-cont button{
+    background-color: #0000ff;
+    border: none;
+    color: white;
+    width: 100%;
+    border-radius: 50px;
+    padding: 2px 2vw;
+    font-size: 3vw;
+}
+.last-border{
+    border-bottom: none;
 }
