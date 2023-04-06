@@ -1,0 +1,68 @@
+.invest{
+    padding: 2vh 3vh;
+
+}
+.invest-nav{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #0000ff;
+    z-index: 1;
+    background-color: #e9e5e5;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    
+
+}
+.invest-text{
+    margin-top: 70px;
+    padding: 2vh 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow: -5px 5px 2px 0 rgba(77, 75, 75, 0.107),
+     inset 5px -5px 2px 0 rgba(255, 255, 255, 0.763);
+}
+.invest-text h3{
+    font-size: 7vw;
+    color: #0000ff;
+    margin: 2vh 0;
+}
+.invest-text p{
+    text-align: center;
+    font-size: 3.7vw;
+    color: gray;
+}
+
+.invest-ads{
+    height: 100px;
+    background-color: #0f12ad13;
+    background-image: url(../img/bonus.png);
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    background-position: right;
+    padding: 2vh 3vw;
+    margin: 2vh 0;
+}
+.invest-ads h4{
+    font-size: 4.5vw;
+}
+.invest-ads p{
+    color: black;
+    font-size: 2.7vw;
+    margin-bottom: 10px;
+    max-width: 65%;
+}
+.invest-ads button{
+    background-color: #0022ff13;
+    border: 1px solid #0000ff;
+    color: #0000ff;
+    font-size: 3vw;
+    border-radius: 5px;
+    padding: 1vh 3vw;
+    margin-bottom: 2px;
+    /* width: 100px; */
+}

@@ -1,6 +1,8 @@
 .reward{
     padding: 2vh 3vh;
 
+    display: none;
+
 }
 .reward-nav{
     width: 90%;
