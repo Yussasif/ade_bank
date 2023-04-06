@@ -2,6 +2,8 @@
     padding: 2vh 3vh;
     margin-bottom: 15vh;
 
+    display: none;
+
 }
 .invest-nav{
     width: 90%;

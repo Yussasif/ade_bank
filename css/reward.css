@@ -1,7 +1,7 @@
 .reward{
     padding: 2vh 3vh;
 
-    display: none;
+    /* display: none; */
 
 }
 .reward-nav{
@@ -131,7 +131,7 @@
     font-size: 3.5vw;
 }
 .ads{
-    height: 100px;
+    /* height: 100px; */
     background-color: #0f12ad13;
     background-image: url(../img/bonus.png);
     background-repeat: no-repeat;
