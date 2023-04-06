@@ -39,7 +39,7 @@
 }
 
 .invest-ads{
-    height: 100px;
+    /* height: 100px; */
     background-color: #0f12ad13;
     background-image: url(../img/bonus.png);
     background-repeat: no-repeat;
