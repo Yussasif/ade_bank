@@ -36,7 +36,6 @@ const pendings = [transactionHisBtn, transferBtn, loanBtn, withdrawBtn]
 pendings.forEach((pending) => pending.addEventListener('click', function(){
     openPopUp()
     popUPMessage.textContent = 'This functionality has not yet been implemented. Check back later'
-    console.log(popUPMessage.textContent)
 }))
 
 
