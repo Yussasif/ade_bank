@@ -24,8 +24,19 @@
 
     <!-- //////////////////////// -->
     <!-- POP UPs -->
-    <div class="pop-up">pop up <span class="cancel">&times;</span></div>
-    <div class="blur">blur </div>
+    <div class="pop-up">
+        
+        <div class="popup-text"><p class='popup-message'>This Web app is under construction, You can take a quick tour of what we have done so far</p></div>
+        
+        <span class="cancel">&times;</span> 
+        
+        
+        <div class="popup-btn"><button class='ok'>Ok</button></div>
+
+    </div>
+    
+        <div class="blur">blur </div>
+    
     <div class="authentication-status authentication-failed">Unauthorized</div>
 
 <!-- /////////////////////////////////////////////////// -->
@@ -57,12 +68,12 @@
                     <p>Total Balance</p>
                     <p class="balance-amount">$56,000</p>
                 </div>
-                <p>Transaction History &gt;</p>
+                <p id='transaction-history-btn'>Transaction History &gt;</p>
             </div>
             <div class="balance-down">
-                <p><i class="fa-solid fa-house-user"></i>Transfer</p>
-                <p><i class="fa-solid fa-house-user"></i>Loan</p>
-                <p><i class="fa-solid fa-house-user"></i>Withdraw</p>
+                <p id='transfer-btn'><i class="fa-solid fa-house-user"></i>Transfer</p>
+                <p id='loan-btn'><i class="fa-solid fa-house-user"></i>Loan</p>
+                <p id='withdraw-btn'><i class="fa-solid fa-house-user"></i>Withdraw</p>
             </div>
         </div>
 
