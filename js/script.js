@@ -3,7 +3,6 @@ const popUp = document.querySelector('.pop-up')
 const cancelBtn = document.querySelector('.cancel')
 const okBtn  = document.querySelector('.ok')
 const overlay = document.querySelector('.blur')
-let popUPMessage = document.querySelector('.popup-message')
 const transactionHisBtn = document.querySelector('#transaction-history-btn')
 const transferBtn = document.querySelector('#transfer-btn')
 const loanBtn = document.querySelector('#loan-btn')
@@ -11,8 +10,8 @@ const withdrawBtn = document.querySelector('#withdraw-btn')
 const links = document.querySelector('.links')
 const pages = document.querySelectorAll('.page')
 const linkBtn = document.querySelectorAll('.link')
-console.log(popUPMessage)
-
+let popUPMessage = document.querySelector('.popup-message')
+const getRewardBtn = document.querySelector('.claim-btn-cont')
 ///////////////POP UP///////////////
 
 ///OPEN POP UP///
@@ -32,12 +31,11 @@ const closePopUpbBtns = [overlay, cancelBtn, okBtn]
 closePopUpbBtns.forEach(btn => btn.addEventListener('click', closePupUp))
 
 ////////PENDING FUNCTIONALITIES WARNING ON CLICK////////
-const pendings = [transactionHisBtn, transferBtn, loanBtn, withdrawBtn]
+const pendings = [transactionHisBtn, transferBtn, loanBtn, withdrawBtn, getRewardBtn]
 pendings.forEach((pending) => pending.addEventListener('click', function(){
     openPopUp()
     popUPMessage.textContent = 'This functionality has not yet been implemented. Check back later'
 }))
-
 
 //////////////NAVIGATE PAGES///////////////
 
