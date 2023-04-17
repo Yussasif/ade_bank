@@ -329,7 +329,7 @@ login.addEventListener('submit', function(e){
     e.preventDefault();
     accNumber = Number(inputAccNumber.value)
     pin = Number(inputPin.value)
-    console.log(accNumber, pin)
+
     let status = 'failed';
     if( accNumber === acc1.accountNo && pin === acc1.pin){
         status = 'success'
@@ -337,7 +337,6 @@ login.addEventListener('submit', function(e){
         navBar.classList.remove('hidden')
         login.classList.add('hidden')
     }
-    // authenticationType = document.querySelector('.authentication-status')
     const authType = status === 'success' ? 'success':'failed'
     const authText = status === 'success' ? 'Authorized' : 'Unauthorized'
     const html = `
@@ -348,5 +347,5 @@ login.addEventListener('submit', function(e){
     
     setTimeout(function(){
         document.querySelector('.authentication-status').remove()
-    }, 1000 * 3)
+    }, 1000 * 2)
 })
