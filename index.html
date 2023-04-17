@@ -37,11 +37,20 @@
     
         <div class="blur">blur </div>
     
-    <div class="authentication-status authentication-failed">Unauthorized</div>
+    <!-- <div class="authentication-status authentication-failed">Unauthorized</div> -->
+    
+    <!-- ///////////////LOGIN FORM////////// -->
+    <div class="login-form">
+        <form class='login' action="">
+            <input id='acc-Number' type="number" placeholder='Acc text' value='7018937378'/>
+            <input type="text" name="Pin" id="pin" placeholder='Pin' value='1111'>
+            <button id='login-btn'>LOGIN</button>
+        </form>
+    </div>
 
 <!-- /////////////////////////////////////////////////// -->
     <!-- NAVIGATION BAR -->
-    <div class="navbar">
+    <div class="navbar hidden">
         <ul class="links">
             <li class="link-item active home-btn" data-tag="1"> <a href="#home" class="link"><i class="fa-solid fa-house-user"></i>
                 Home</a> </li>
@@ -55,7 +64,7 @@
     <!-- //////////////////////////////////////////////// -->
     <!-- HOME PAGE -->
 
-    <section id='home' class="home  page" data-tag="1">
+    <section id='home' class="home  hidden page" data-tag="1">
 
         <div class="greet">
             <img src="./img/logo.png" alt="profile picture" width="30px" height="auto">
@@ -123,55 +132,6 @@
                     <p>-$408.00</p>
                 </div>
             </div>
-
-
-
-            <div class="transactions credit-transaction">
-                <div class="trans-type-cont">
-                    <img src="./img/logo.png" alt="Transaction type" class="transaction-type" width="20px" height="20px">
-
-                </div>
-                <div class="transaction-to-fro">
-                    <p class="trans-name">Owoade Yusuf Adetunji</p> 
-                    <p class="trans-time"> 07:51 PM</p>
-                </div>
-
-                <div class="transaction-amount">
-                    <p>$780.00</p>
-                </div>
-            </div>
-
-            <div class="transactions loan-transaction">
-                <div class="trans-type-cont">
-                    <img src="./img/logo.png" alt="Transaction type" class="transaction-type" width="20px" height="20px">
-
-                </div>
-                <div class="transaction-to-fro">
-                    <p class="trans-name">Owoade Yusuf Adetunji</p> 
-                    <p class="trans-time"> 07:51 PM</p>
-                </div>
-                <div class="transaction-amount">
-                    <p>$40,000,000.00</p>
-                </div>
-            </div>
-
-            <div class="transactions debit-transaction">
-                <div class="trans-type-cont">
-                    <img src="./img/logo.png" alt="Transaction type" class="transaction-type" width="20px" height="20px">
-
-                </div>
-                <div class="transaction-to-fro">
-                    <p class="trans-name">Owoade Yusuf Adetunji</p> 
-                    <p class="trans-time"> 07:51 PM</p>
-                </div>
-
-                <div class="transaction-amount">
-                    <p>-$40.00</p>
-                </div>
-            </div>
-
-
-
             
         </div>
     </section>

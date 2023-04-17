@@ -6,6 +6,7 @@
 @import "./reward.css";
 @import './invest.css';
 @import './history.css';
+@import './login.css';
 
 *{
     margin: 0;

@@ -8,7 +8,8 @@ const overlay = document.querySelector('.blur')
 ///NAV///
 const links = document.querySelector('.links')
 const pages = document.querySelectorAll('.page')
-const linkBtn = document.querySelectorAll('.link')
+const linkBtn = document.querySelectorAll('link')
+const navBar = document.querySelector('.navbar')
 ///HOME///
 const home = document.querySelector('#home')
 const accountBalance = document.querySelector('.balance-amount')
@@ -75,7 +76,7 @@ const acc1 = {
         transactionLastName: 'Potfolio',
         transactionDate : '20/03/2023',
         transactionAmount : -320,
-        transactionTime : '07 : 00',
+        transactionTime : '08 : 00',
         getTransactionType (){
            return  this.transactionAmount > 0 ? 'credit' : 'debit' 
         } 
@@ -85,7 +86,7 @@ const acc1 = {
         transactionLastName: 'oloriole',
         transactionDate : '04/01/2023',
         transactionAmount : 520,
-        transactionTime : '12 : 00',
+        transactionTime : '12 : 10',
         getTransactionType (){
            return  this.transactionAmount > 0 ? 'credit' : 'debit' 
         } 
@@ -95,7 +96,7 @@ const acc1 = {
         transactionLastName: 'fajemilehin',
         transactionDate : '10/04/2023',
         transactionAmount : -430,
-        transactionTime : '07 : 00',
+        transactionTime : '05 : 50',
         getTransactionType (){
            return  this.transactionAmount > 0 ? 'credit' : 'debit' 
         } 
@@ -140,7 +141,68 @@ const acc2 = {
     email: 'detaffiliate@gmail.com',
     accountNo: 8130152653,
     phoneNumber: '08130152653',
-    transactions: [450, 240, -240, 2300, -240, 400, -2245, -645]
+    transactions: [{
+        transactionFirstName : 'OLAWALE',
+        transactionLastName: 'ADIO',
+        transactionDate : '10/12/2022',
+        transactionAmount : 5020,
+        transactionTime : '10 : 05',
+        getTransactionType (){
+           return  this.transactionAmount > 0 ? 'credit' : 'debit' 
+        } 
+    },
+    {
+        transactionFirstName : 'OLUSANYA',
+        transactionLastName: 'ARIBIDESI',
+        transactionDate : '14/11/2021',
+        transactionAmount : 500,
+        transactionTime : '12 : 10',
+        getTransactionType (){
+           return  this.transactionAmount > 0 ? 'credit' : 'debit' 
+        } 
+    },
+    {
+        transactionFirstName : 'ADEBOMI',
+        transactionLastName: 'IRUMOLE',
+        transactionDate : '12/04/2023',
+        transactionAmount : -4300,
+        transactionTime : '05 : 50',
+        getTransactionType (){
+           return  this.transactionAmount > 0 ? 'credit' : 'debit' 
+        } 
+    },
+    {
+        transactionFirstName : 'IFAYEMI',
+        transactionLastName: 'FAJEMILEYIN',
+        transactionDate : '10/02/2023',
+        transactionAmount : 5000,
+        transactionTime : '03 : 23',
+        getTransactionType (){
+           return  this.transactionAmount > 0 ? 'credit' : 'debit' 
+        } 
+    },
+    {
+        transactionFirstName : 'IDIARABA',
+        transactionLastName: 'IDIORO',
+        transactionDate : '12/03/2023',
+        transactionAmount : -420,
+        transactionTime : '07 : 00',
+        getTransactionType (){
+           return  this.transactionAmount > 0 ? 'credit' : 'debit' 
+        } 
+    },
+    {
+        transactionFirstName : 'IDIABAJO',
+        transactionLastName: 'IDIARERE',
+        transactionDate : '20/03/2023',
+        transactionAmount : 420,
+        transactionTime : '07 : 00',
+        getTransactionType (){
+           return  this.transactionAmount > 0 ? 'credit' : 'debit' 
+        } 
+    }
+
+]
 }
 const acc3 = {
     firstName: 'adeshina',
@@ -149,7 +211,68 @@ const acc3 = {
     email: 'adesh@gmail.com',
     accountNo: 7018937398,
     phoneNumber: '07018937398',
-    transactions: [470, 540, -330, 920, -440, 3000, -245, -1145]
+    transactions: [{
+        transactionFirstName : 'MODERN',
+        transactionLastName: 'LANGUAGE',
+        transactionDate : '20/03/2023',
+        transactionAmount : -3520,
+        transactionTime : '08 : 00',
+        getTransactionType (){
+           return  this.transactionAmount > 0 ? 'credit' : 'debit' 
+        } 
+    },
+    {
+        transactionFirstName : 'ADIO',
+        transactionLastName: 'MICHEAL',
+        transactionDate : '04/01/2023',
+        transactionAmount : 520,
+        transactionTime : '12 : 10',
+        getTransactionType (){
+           return  this.transactionAmount > 0 ? 'credit' : 'debit' 
+        } 
+    },
+    {
+        transactionFirstName : 'AJIBOLA',
+        transactionLastName: 'MOSES',
+        transactionDate : '10/04/2023',
+        transactionAmount : -3030,
+        transactionTime : '05 : 50',
+        getTransactionType (){
+           return  this.transactionAmount > 0 ? 'credit' : 'debit' 
+        } 
+    },
+    {
+        transactionFirstName : 'OLOBE',
+        transactionLastName: 'fransis',
+        transactionDate : '10/02/2023',
+        transactionAmount : 500,
+        transactionTime : '03 : 23',
+        getTransactionType (){
+           return  this.transactionAmount > 0 ? 'credit' : 'debit' 
+        } 
+    },
+    {
+        transactionFirstName : 'MONDAY',
+        transactionLastName: 'ogaoga',
+        transactionDate : '12/03/2023',
+        transactionAmount : -420,
+        transactionTime : '07 : 00',
+        getTransactionType (){
+           return  this.transactionAmount > 0 ? 'credit' : 'debit' 
+        } 
+    },
+    {
+        transactionFirstName : 'AJIMSON',
+        transactionLastName: 'LAURENCE',
+        transactionDate : '20/03/2023',
+        transactionAmount : 500,
+        transactionTime : '07 : 00',
+        getTransactionType (){
+           return  this.transactionAmount > 0 ? 'credit' : 'debit' 
+        } 
+    }
+
+]
 }
 
 const accounts = [acc1, acc2, acc3]
@@ -162,7 +285,6 @@ acc1.transactions.forEach(function(transaction) {
             <div class="transactions ${transaction.getTransactionType()}-transaction">
                 <div class="trans-type-cont">
                  <img src="./img/logo.png" alt="Transaction type" class="transaction-type" width="20px" height="20px">
-
                 </div>
                 <div class="transaction-to-fro">
                     <p class="trans-name">${transaction.transactionFirstName} ${transaction.transactionLastName}</p> 
@@ -179,9 +301,11 @@ recentHistory.insertAdjacentHTML("afterbegin", markup)
 transactionHistory.insertAdjacentHTML('afterbegin', markup)
 })
 
+//////////CACULATE BALANCE//////////////
 const calcBalance = acc1.transactions.reduce((accumulator, transaction) => transaction.transactionAmount + accumulator ,0)
 accountBalance.textContent = `$${calcBalance}`
 
+/////////SHOW TRANSACTION HISTORY/////////
 transactionHisBtn.addEventListener('click', function(e){
     e.preventDefault();
     home.classList.add('hidden')
@@ -191,4 +315,38 @@ backHome.addEventListener('click', function(e){
     e.preventDefault();
     home.classList.remove('hidden')
     historyPage.classList.add('hidden')
+})
+
+//////////////////LOGIN/////////////////
+const login = document.querySelector('.login-form')
+const inputAccNumber = document.querySelector('#acc-Number')
+const inputPin = document.querySelector('#pin')
+const loginBtn = document.querySelector('#login-btn')
+
+console.log(loginBtn)
+
+login.addEventListener('submit', function(e){
+    e.preventDefault();
+    accNumber = Number(inputAccNumber.value)
+    pin = Number(inputPin.value)
+    console.log(accNumber, pin)
+    let status = 'failed';
+    if( accNumber === acc1.accountNo && pin === acc1.pin){
+        status = 'success'
+        home.classList.remove('hidden')
+        navBar.classList.remove('hidden')
+        login.classList.add('hidden')
+    }
+    // authenticationType = document.querySelector('.authentication-status')
+    const authType = status === 'success' ? 'success':'failed'
+    const authText = status === 'success' ? 'Authorized' : 'Unauthorized'
+    const html = `
+    <div class="authentication-status authentication-${authType}">${authText}</div>
+    `
+    document.querySelector('body').insertAdjacentHTML('afterbegin', html)
+
+    
+    setTimeout(function(){
+        document.querySelector('.authentication-status').remove()
+    }, 1000 * 3)
 })
