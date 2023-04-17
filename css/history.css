@@ -1,0 +1,27 @@
+.transaction-history-page{
+    padding: 2vh 3vw;
+}
+.history-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    color: #0000ff;
+    padding: 2vh 0;
+    position: fixed;
+    top: 0;
+    height: 10vh;
+}
+.history-nav .back{
+    /* width: 25%; */
+    color: #0000ff;
+}
+.transaction-history-page h4{
+    font-size: 5vw;
+    margin-left: 20%;
+    
+
+}
+.transaction-history{
+margin-top: 10vh;
+}

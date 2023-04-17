@@ -5,6 +5,7 @@
 @import "./popups.css";
 @import "./reward.css";
 @import './invest.css';
+@import './history.css';
 
 *{
     margin: 0;

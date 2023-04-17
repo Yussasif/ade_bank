@@ -15,7 +15,9 @@ const getRewardBtn = document.querySelector('.claim-btn-cont')
 const home = document.querySelector('#home')
 const recentHistory =  document.querySelector('.recent-history')
 const transactionHisBtn = document.querySelector('#transaction-history-btn')
-const historyPage = document.querySelector('.transaction-history')
+const historyPage = document.querySelector('.transaction-history-page')
+const transactionHistory = document.querySelector('.transaction-history')
+const backHome = document.querySelector('.back')
 
 ///////////////POP UP///////////////
 ///OPEN POP UP///
@@ -147,7 +149,7 @@ const accounts = [acc1, acc2, acc3]
 
 //////////////////DISPLAYING EACH TRANSACTION//////////////////
 recentHistory.textContent = ''
-historyPage.textContent = ''
+transactionHistory.textContent = ''
 acc1.transactions.forEach(function(transaction) {
     const markup = `
             <div class="transactions ${transaction.getTransactionType()}-transaction">
@@ -167,15 +169,19 @@ acc1.transactions.forEach(function(transaction) {
             </div>
     `
 recentHistory.insertAdjacentHTML("afterbegin", markup)
-historyPage.insertAdjacentHTML('afterbegin', markup)
+transactionHistory.insertAdjacentHTML('afterbegin', markup)
 })
 
 const calcBalance = acc1.transactions.reduce((accumulator, transaction) => transaction.transactionAmount + accumulator ,0)
 accountBalance.textContent = `$${calcBalance}`
-console.log(calcBalance)
 
 transactionHisBtn.addEventListener('click', function(e){
     e.preventDefault();
     home.classList.add('hidden')
     historyPage.classList.remove('hidden')
+})
+backHome.addEventListener('click', function(e){
+    e.preventDefault();
+    home.classList.remove('hidden')
+    historyPage.classList.add('hidden')
 })

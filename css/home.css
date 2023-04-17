@@ -1,9 +1,6 @@
 @media screen and (max-width: 500px) {
     .home{
-        margin: 2vh 5vw;
-
-        /* display: none; */
-        
+        margin: 2vh 5vw;  
     }
     .greet{
         display: flex;
@@ -68,16 +65,15 @@
 
     }
     .recent-history{
-        /* margin: 3vh 0 ; */
         position: fixed;
         height: 40vh;
         width: 90%;
-        top: 37vh;
+        top: 40vh;
         bottom: 10vh;
         overflow-y: scroll;
 
     }
-    .recent-history h4{
+    .home h4{
         font-size: 4vw;
         margin-bottom: 2vh;
         color: #0000ff;
@@ -85,10 +81,6 @@
     .transactions{
         display: flex;
         justify-content: space-between;
-
-        /* height: 45px; */
-        /* width: 100%; */
-        /* margin-top: 3vh; */
         border-radius: 5px;
         padding: 2vh 3vw;
         box-shadow: inset -5px -5px 2px 0 rgba(77, 75, 75, 0.107),
