@@ -1,20 +1,27 @@
 ///////////IMPORTING ELEMENT FROM HTML//////////////
+///POP UP///
 let popUPMessage = document.querySelector('.popup-message')
 const popUp = document.querySelector('.pop-up')
 const cancelBtn = document.querySelector('.cancel')
 const okBtn  = document.querySelector('.ok')
 const overlay = document.querySelector('.blur')
+///NAV///
+const links = document.querySelector('.links')
+const pages = document.querySelectorAll('.page')
+const linkBtn = document.querySelectorAll('.link')
+///HOME///
+const home = document.querySelector('#home')
 const accountBalance = document.querySelector('.balance-amount')
 const transferBtn = document.querySelector('#transfer-btn')
 const loanBtn = document.querySelector('#loan-btn')
 const withdrawBtn = document.querySelector('#withdraw-btn')
-const links = document.querySelector('.links')
-const pages = document.querySelectorAll('.page')
-const linkBtn = document.querySelectorAll('.link')
-const getRewardBtn = document.querySelector('.claim-btn-cont')
-const home = document.querySelector('#home')
 const recentHistory =  document.querySelector('.recent-history')
 const transactionHisBtn = document.querySelector('#transaction-history-btn')
+///REWARD///
+const getRewardBtn = document.querySelector('.claim-btn-cont')
+///INVEST///
+///CARDS///
+///TRANSACTION HISTORY///
 const historyPage = document.querySelector('.transaction-history-page')
 const transactionHistory = document.querySelector('.transaction-history')
 const backHome = document.querySelector('.back')
