@@ -17,8 +17,9 @@
 .login input{
     width: 90%;
     margin: 2vh ;
-    height: 5vh;
+    height: 40px;
     border-radius: 5px;
+    font-size: 4vw;
     border: none;
     padding: 1vh 2vw;
 }
@@ -28,10 +29,16 @@
     border: none;
     border-radius: 5px;
     width: 90%;
+    height: 40px;
     padding: 1vh;
-
 }
 .login button:hover{
     background: #fff;
+    color: #0000ff;
+}
+.login p{
+    font-size: 4vw;
+}
+.login a{
     color: #0000ff;
 }

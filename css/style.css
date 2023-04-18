@@ -7,6 +7,7 @@
 @import './invest.css';
 @import './history.css';
 @import './login.css';
+@import './register.css';
 
 *{
     margin: 0;

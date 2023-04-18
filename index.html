@@ -38,13 +38,28 @@
         <div class="blur">blur </div>
     
     <!-- <div class="authentication-status authentication-failed">Unauthorized</div> -->
-    
+<!-- ////////////////////REGISTER//////////// -->
+    <form action="create account" class="create-new-account">
+        <h4>CREATE ACCOUNT</h4>
+        <input class='name input' type="text" id='firstname' placeholder='First Name'>
+        <input class='name input' type="text" id='lastname' placeholder='Last Name'>
+        <input class='input' type="text" id='email' placeholder='E-mail'>
+        <input class='input' type="text", id='phonenumber' placeholder='Phone Number'>
+        <input class='input pin' type="text" id='create-pin' placeholder='Pin (4 digits)'>
+        <input class='input pin' type="text" name="" id="confirm-pin" placeholder='Confirm Pin'>
+        <button class='sign-up'>SIGN UP </button>
+        <p>Already have an account? <a id='goto-login'>Login</a></p>
+
+    </form>
+
     <!-- ///////////////LOGIN FORM////////// -->
     <div class="login-form">
         <form class='login' action="">
-            <input id='acc-Number' type="number" placeholder='Acc text' value='7018937378'/>
-            <input type="text" name="Pin" id="pin" placeholder='Pin' value='1111'>
+            <input id='acc-Number' type="text" placeholder='Acc Number (10 digits)' value='7018937378'/>
+            <input type="password" name="Pin" id="pin" placeholder='Pin' value='1111'>
             <button id='login-btn'>LOGIN</button>
+            <p>Don't have an account? <a id='goto-sign-up'>Sign Up</a></p>
+
         </form>
     </div>
 
@@ -342,6 +357,14 @@
         </div>
     </section>
 
+    <!-- ///////////////////////////////////// -->
+    <!-- TRANSFER PAGE -->
+    <!-- <form action="transfer" class="transfer-form">
+        <label for="recipient account">Account Number</label>
+        <input type="text" name="recipient account" id="recipient-acc" placeholder='10 digits'>
+        <label  for="transfter amount">Amount</label>
+        <input type="text" id='transfer-amount' placeholder='$ 100.00 - 5,000,000.00'>
+    </form> -->
   
 </body>
 </html>

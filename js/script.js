@@ -4,6 +4,7 @@ const loginForm = document.querySelector('.login-form')
 const inputAccNumber = document.querySelector('#acc-Number')
 const inputPin = document.querySelector('#pin')
 const loginBtn = document.querySelector('#login-btn')
+const gotoSignUpBtn = document.querySelector('#goto-sign-up')
 ///POP UP///
 let popUPMessage = document.querySelector('.popup-message')
 const popUp = document.querySelector('.pop-up')
@@ -269,6 +270,7 @@ const acc3 = {
         transactionDate : '20/03/2023',
         transactionAmount : -3520,
         transactionTime : '08 : 00',
+        Remark:'',
         getTransactionType (){
            return  this.transactionAmount > 0 ? 'credit' : 'debit' 
         } 
@@ -343,14 +345,18 @@ backHome.addEventListener('click', function(e){
     historyPage.classList.add('hidden')
 })
 
-
+gotoSignUpBtn.addEventListener('click', function(e){
+    e.preventDefault()
+    loginForm.classList.add('hidden')
+    createAccount.classList.remove('hidden')
+})
 ///////////////////////////ACCOUNTS LOGIN VALIDATION
 loginForm.addEventListener('submit', function(e){
     e.preventDefault();
     let status = 'failed';
     accNumber = Number(inputAccNumber.value)
-    pin = Number(inputPin.value)
-   const activeAcc = accounts.find(account => accNumber === account.accountNo && pin === account.pin)
+    accPin = Number(inputPin.value)
+   let activeAcc = accounts.find(account => accNumber === account.accountNo && accPin === account.pin)
 
    console.log(accNumber, pin)
 
@@ -376,4 +382,82 @@ loginForm.addEventListener('submit', function(e){
     setTimeout(() => document.querySelector('.authentication-status').remove()
     , 2000)
 
+})
+
+
+const createNewAccount = function(firstName, lastName, pin, email, phoneNumber){
+    
+    class Account {
+        constructor(firstName, lastName, pin, email, phoneNumber, ){
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.pin = pin;
+            this.email = email;
+            this.phoneNumber = phoneNumber;
+        }
+      
+        get accountNo () {
+          const acc = this.phoneNumber.slice(1)
+            return Number(acc)
+        }
+        transactions = []
+    }
+
+ accounts.push( new Account (firstName, lastName, pin, email, phoneNumber))
+}
+createNewAccount('ayinla', 'owoadey', 4444, 'yusuf@gmail.com', '09023456789')
+console.log(accounts)
+
+///////////////REGISTER/////////////
+const createAccount = document.querySelector('.create-new-account')
+const firstName = document.querySelector('#firstname')
+const lastName = document.querySelector('#lastname')
+const email = document.querySelector('#email')
+const phoneNumber = document.querySelector('#phonenumber')
+const pin = document.querySelector('#create-pin')
+const confirmPin = document.querySelector('#confirm-pin')
+const signUpBtn = document.querySelector('.sign-up')
+const goToLoginBtn = document.querySelector('#goto-login')
+
+goToLoginBtn.addEventListener('click', function(e){
+    e.preventDefault()
+    createAccount.classList.add('hidden')
+    loginForm.classList.remove('hidden')
+})
+
+
+createAccount.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    if (!firstName.value || !lastName.value || !Number(pin.value) || !email.value || !phoneNumber.value) {alert('all space must be filled ')
+return}
+
+    const eitherExist = accounts.some((acc) => acc.phoneNumber === phoneNumber.value || acc.email === email.value)
+
+    const emailExist = accounts.some((acc) => acc.email === email.value)
+
+    const phoneNumberExist = accounts.some((acc) => (acc.phoneNumber === phoneNumber.value && phoneNumber.value !== '') || (acc.email === email.value && email.value !== ''))
+    
+    if(eitherExist) {
+    alert('Email or Phone Number already existed')
+    
+    emailExist ?  email.style.border = '2px solid red' : phoneNumber.style.border = '2px solid red'
+    return
+}
+if(pin.value !== confirmPin.value){
+    alert('Pin not confirmed')
+    confirmPin.style.border = '2px solid red'
+    return
+}
+
+email.style.border = 'none'
+phoneNumber.style.border = 'none'
+confirmPin.style.border = 'none'
+
+   createNewAccount(firstName.value, lastName.value, Number(pin.value), email.value, phoneNumber.value)
+    console.log(accounts)
+    
+    firstName.value = lastName.value = pin.value = email.value = phoneNumber.value = confirmPin.value = ''
+    createAccount.classList.add('hidden')
+    loginForm.classList.remove('hidden')
 })
