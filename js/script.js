@@ -1,4 +1,9 @@
 ///////////IMPORTING ELEMENT FROM HTML//////////////
+//////////////////LOGIN/////////////////
+const loginForm = document.querySelector('.login-form')
+const inputAccNumber = document.querySelector('#acc-Number')
+const inputPin = document.querySelector('#pin')
+const loginBtn = document.querySelector('#login-btn')
 ///POP UP///
 let popUPMessage = document.querySelector('.popup-message')
 const popUp = document.querySelector('.pop-up')
@@ -12,6 +17,7 @@ const linkBtn = document.querySelectorAll('.link')
 const navBar = document.querySelector('.navbar')
 ///HOME///
 const home = document.querySelector('#home')
+const greetMessage = document.querySelector('.greet-message')
 const accountBalance = document.querySelector('.balance-amount')
 const transferBtn = document.querySelector('#transfer-btn')
 const loanBtn = document.querySelector('#loan-btn')
@@ -26,6 +32,51 @@ const getRewardBtn = document.querySelector('.claim-btn-cont')
 const historyPage = document.querySelector('.transaction-history-page')
 const transactionHistory = document.querySelector('.transaction-history')
 const backHome = document.querySelector('.back')
+
+///////////////////FUNCTIONS///////////////////
+//Capitalize Text//
+const capitalize = (text) => text.charAt(0).toUpperCase().concat(text.slice(1).toLowerCase());
+
+
+////display greet message///
+const greet = function (account){
+    const {firstName} = account
+    const newFirstName = capitalize(firstName)
+    greetMessage.textContent = `Hello!, ${newFirstName}`
+    return greetMessage
+}
+
+//////////////////DISPLAYING EACH TRANSACTIONs//////////////////
+const getTransactionHistory = function(account){
+    recentHistory.textContent = transactionHistory.textContent = ''
+
+    account.transactions.forEach(function(transaction) {
+    const {transactionFirstName, transactionLastName, transactionDate, transactionAmount, transactionTime} = transaction
+        const markup = `
+        <div class="transactions ${transaction.getTransactionType()}-transaction">
+        <div class="trans-type-cont">
+        <img src="./img/logo.png" alt="Transaction type" class="transaction-type" width="20px" height="20px">
+        </div>
+        <div class="transaction-to-fro">
+        <p class="trans-name">${capitalize(transactionFirstName)} ${capitalize(transactionLastName)}</p> 
+        <p class="trans-time"> ${transactionTime}PM
+        <span class='trans-date'> ${transactionDate}</span></p>
+        </div>
+        
+        <div class="transaction-amount">
+        <p>${transactionAmount}</p>
+        </div>
+        </div>
+        `
+recentHistory.insertAdjacentHTML("afterbegin", markup)
+transactionHistory.insertAdjacentHTML('afterbegin', markup)
+})}
+
+//////////CACULATE BALANCE//////////////
+const calcBalance = function(account) {
+    const calcBalance = account.transactions.reduce((accumulator, transaction) => transaction.transactionAmount + accumulator ,0)
+ return accountBalance.textContent = `$${calcBalance}`
+}
 
 ///////////////POP UP///////////////
 ///OPEN POP UP///
@@ -49,6 +100,20 @@ pendings.forEach((pending) => pending.addEventListener('click', function(){
     popUPMessage.textContent = 'This functionality has not yet been implemented. Check back later'
 }))
 
+//////////////NAVIGATE PAGES///////////////
+links.addEventListener('click', function(e){
+    e.preventDefault();
+    const link = e.target
+   
+    if(!link.classList.contains('link'))return
+
+    historyPage.classList.add('hidden')
+
+    linkBtn.forEach(btn => btn === e.target ? btn.closest('.link-item').classList.add('active'): btn.closest('.link-item').classList.remove('active'));
+  
+    pages.forEach(page => page.dataset.tag === e.target.closest('.link-item').dataset.tag ? page.classList.remove('hidden') : page.classList.add('hidden'))
+
+})
 
 //////////////ACCOUNTS/////////////////////
 const acc1 = {
@@ -194,7 +259,7 @@ const acc2 = {
 const acc3 = {
     firstName: 'adeshina',
     lastName: 'owoade',
-    pin: 1111,
+    pin: 3333,
     email: 'adesh@gmail.com',
     accountNo: 7018937398,
     phoneNumber: '07018937398',
@@ -264,33 +329,7 @@ const acc3 = {
 
 const accounts = [acc1, acc2, acc3]
 
-//////////////////DISPLAYING EACH TRANSACTION//////////////////
-recentHistory.textContent = ''
-transactionHistory.textContent = ''
-acc1.transactions.forEach(function(transaction) {
-    const markup = `
-    <div class="transactions ${transaction.getTransactionType()}-transaction">
-    <div class="trans-type-cont">
-    <img src="./img/logo.png" alt="Transaction type" class="transaction-type" width="20px" height="20px">
-    </div>
-    <div class="transaction-to-fro">
-    <p class="trans-name">${transaction.transactionFirstName} ${transaction.transactionLastName}</p> 
-    <p class="trans-time"> ${transaction.transactionTime}PM
-    <span class='trans-date'> ${transaction.transactionDate}</span></p>
-    </div>
-    
-    <div class="transaction-amount">
-    <p>${transaction.transactionAmount}</p>
-    </div>
-    </div>
-    `
-recentHistory.insertAdjacentHTML("afterbegin", markup)
-transactionHistory.insertAdjacentHTML('afterbegin', markup)
-})
 
-//////////CACULATE BALANCE//////////////
-const calcBalance = acc1.transactions.reduce((accumulator, transaction) => transaction.transactionAmount + accumulator ,0)
-accountBalance.textContent = `$${calcBalance}`
 
 /////////SHOW TRANSACTION HISTORY/////////
 transactionHisBtn.addEventListener('click', function(e){
@@ -304,27 +343,29 @@ backHome.addEventListener('click', function(e){
     historyPage.classList.add('hidden')
 })
 
-//////////////////LOGIN/////////////////
-const login = document.querySelector('.login-form')
-const inputAccNumber = document.querySelector('#acc-Number')
-const inputPin = document.querySelector('#pin')
-const loginBtn = document.querySelector('#login-btn')
 
-console.log(loginBtn)
-
-login.addEventListener('submit', function(e){
+///////////////////////////ACCOUNTS LOGIN VALIDATION
+loginForm.addEventListener('submit', function(e){
     e.preventDefault();
+    let status = 'failed';
     accNumber = Number(inputAccNumber.value)
     pin = Number(inputPin.value)
-    
-    let status = 'failed';
-    if( accNumber === acc1.accountNo && pin === acc1.pin){
-        status = 'success'
-        home.classList.remove('hidden')
-        navBar.classList.remove('hidden')
-        login.classList.add('hidden')
-    }
-    const authType = status === 'success' ? 'success':'failed'
+   const activeAcc = accounts.find(account => accNumber === account.accountNo && pin === account.pin)
+
+   console.log(accNumber, pin)
+
+   if(activeAcc){ 
+   home.classList.remove('hidden')
+   navBar.classList.remove('hidden')
+   loginForm.classList.add('hidden')
+   console.log(activeAcc)
+   status = 'success'
+
+   getTransactionHistory(activeAcc)
+   calcBalance(activeAcc)
+   greet(activeAcc)
+}
+   const authType = status === 'success' ? 'success':'failed'
     const authText = status === 'success' ? 'Authorized' : 'Unauthorized'
     const html = `
     <div class="authentication-status authentication-${authType}">${authText}</div>
@@ -334,18 +375,5 @@ login.addEventListener('submit', function(e){
     
     setTimeout(() => document.querySelector('.authentication-status').remove()
     , 2000)
-})
-//////////////NAVIGATE PAGES///////////////
-links.addEventListener('click', function(e){
-    e.preventDefault();
-    const link = e.target
-   
-    if(!link.classList.contains('link'))return
-
-    historyPage.classList.add('hidden')
-
-    linkBtn.forEach(btn => btn === e.target ? btn.closest('.link-item').classList.add('active'): btn.closest('.link-item').classList.remove('active'));
-  
-    pages.forEach(page => page.dataset.tag === e.target.closest('.link-item').dataset.tag ? page.classList.remove('hidden') : page.classList.add('hidden'))
 
 })
