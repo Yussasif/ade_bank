@@ -8,7 +8,7 @@ const overlay = document.querySelector('.blur')
 ///NAV///
 const links = document.querySelector('.links')
 const pages = document.querySelectorAll('.page')
-const linkBtn = document.querySelectorAll('link')
+const linkBtn = document.querySelectorAll('.link')
 const navBar = document.querySelector('.navbar')
 ///HOME///
 const home = document.querySelector('#home')
@@ -49,19 +49,6 @@ pendings.forEach((pending) => pending.addEventListener('click', function(){
     popUPMessage.textContent = 'This functionality has not yet been implemented. Check back later'
 }))
 
-//////////////NAVIGATE PAGES///////////////
-links.addEventListener('click', function(e){
-    e.preventDefault();
-    const link = e.target
-   
-    if(!link.classList.contains('link'))return
-
-    historyPage.classList.add('hidden')
-
-    linkBtn.forEach(btn => btn === e.target ? btn.closest('.link-item').classList.add('active'): btn.closest('.link-item').classList.remove('active'));
-
-    pages.forEach(page => page.dataset.tag === e.target.closest('.link-item').dataset.tag ? page.classList.remove('hidden') : page.classList.add('hidden'))
-})
 
 //////////////ACCOUNTS/////////////////////
 const acc1 = {
@@ -74,7 +61,7 @@ const acc1 = {
     transactions: [{
         transactionFirstName : 'majek',
         transactionLastName: 'Potfolio',
-        transactionDate : '20/03/2023',
+        transactionDate : 'Today',
         transactionAmount : -320,
         transactionTime : '08 : 00',
         getTransactionType (){
@@ -84,17 +71,17 @@ const acc1 = {
     {
         transactionFirstName : 'ogundabeje',
         transactionLastName: 'oloriole',
-        transactionDate : '04/01/2023',
+        transactionDate : 'Yesterday',
         transactionAmount : 520,
         transactionTime : '12 : 10',
         getTransactionType (){
-           return  this.transactionAmount > 0 ? 'credit' : 'debit' 
+            return  this.transactionAmount > 0 ? 'credit' : 'debit' 
         } 
     },
     {
         transactionFirstName : 'aderemi',
         transactionLastName: 'fajemilehin',
-        transactionDate : '10/04/2023',
+        transactionDate : '5days ago',
         transactionAmount : -430,
         transactionTime : '05 : 50',
         getTransactionType (){
@@ -108,7 +95,7 @@ const acc1 = {
         transactionAmount : 5000,
         transactionTime : '03 : 23',
         getTransactionType (){
-           return  this.transactionAmount > 0 ? 'credit' : 'debit' 
+            return  this.transactionAmount > 0 ? 'credit' : 'debit' 
         } 
     },
     {
@@ -118,7 +105,7 @@ const acc1 = {
         transactionAmount : -420,
         transactionTime : '07 : 00',
         getTransactionType (){
-           return  this.transactionAmount > 0 ? 'credit' : 'debit' 
+            return  this.transactionAmount > 0 ? 'credit' : 'debit' 
         } 
     },
     {
@@ -128,10 +115,10 @@ const acc1 = {
         transactionAmount : 420,
         transactionTime : '07 : 00',
         getTransactionType (){
-           return  this.transactionAmount > 0 ? 'credit' : 'debit' 
+            return  this.transactionAmount > 0 ? 'credit' : 'debit' 
         } 
     }
-
+    
 ]
 }
 const acc2 = {
@@ -158,7 +145,7 @@ const acc2 = {
         transactionAmount : 500,
         transactionTime : '12 : 10',
         getTransactionType (){
-           return  this.transactionAmount > 0 ? 'credit' : 'debit' 
+            return  this.transactionAmount > 0 ? 'credit' : 'debit' 
         } 
     },
     {
@@ -178,7 +165,7 @@ const acc2 = {
         transactionAmount : 5000,
         transactionTime : '03 : 23',
         getTransactionType (){
-           return  this.transactionAmount > 0 ? 'credit' : 'debit' 
+            return  this.transactionAmount > 0 ? 'credit' : 'debit' 
         } 
     },
     {
@@ -188,7 +175,7 @@ const acc2 = {
         transactionAmount : -420,
         transactionTime : '07 : 00',
         getTransactionType (){
-           return  this.transactionAmount > 0 ? 'credit' : 'debit' 
+            return  this.transactionAmount > 0 ? 'credit' : 'debit' 
         } 
     },
     {
@@ -198,7 +185,7 @@ const acc2 = {
         transactionAmount : 420,
         transactionTime : '07 : 00',
         getTransactionType (){
-           return  this.transactionAmount > 0 ? 'credit' : 'debit' 
+            return  this.transactionAmount > 0 ? 'credit' : 'debit' 
         } 
     }
 
@@ -228,7 +215,7 @@ const acc3 = {
         transactionAmount : 520,
         transactionTime : '12 : 10',
         getTransactionType (){
-           return  this.transactionAmount > 0 ? 'credit' : 'debit' 
+            return  this.transactionAmount > 0 ? 'credit' : 'debit' 
         } 
     },
     {
@@ -248,7 +235,7 @@ const acc3 = {
         transactionAmount : 500,
         transactionTime : '03 : 23',
         getTransactionType (){
-           return  this.transactionAmount > 0 ? 'credit' : 'debit' 
+            return  this.transactionAmount > 0 ? 'credit' : 'debit' 
         } 
     },
     {
@@ -258,7 +245,7 @@ const acc3 = {
         transactionAmount : -420,
         transactionTime : '07 : 00',
         getTransactionType (){
-           return  this.transactionAmount > 0 ? 'credit' : 'debit' 
+            return  this.transactionAmount > 0 ? 'credit' : 'debit' 
         } 
     },
     {
@@ -271,7 +258,7 @@ const acc3 = {
            return  this.transactionAmount > 0 ? 'credit' : 'debit' 
         } 
     }
-
+    
 ]
 }
 
@@ -282,20 +269,20 @@ recentHistory.textContent = ''
 transactionHistory.textContent = ''
 acc1.transactions.forEach(function(transaction) {
     const markup = `
-            <div class="transactions ${transaction.getTransactionType()}-transaction">
-                <div class="trans-type-cont">
-                 <img src="./img/logo.png" alt="Transaction type" class="transaction-type" width="20px" height="20px">
-                </div>
-                <div class="transaction-to-fro">
-                    <p class="trans-name">${transaction.transactionFirstName} ${transaction.transactionLastName}</p> 
-                    <p class="trans-time"> ${transaction.transactionTime}PM
-                    <span class='trans-date'> ${transaction.transactionDate}</span></p>
-                </div>
-
-                <div class="transaction-amount">
-                    <p>${transaction.transactionAmount}</p>
-                </div>
-            </div>
+    <div class="transactions ${transaction.getTransactionType()}-transaction">
+    <div class="trans-type-cont">
+    <img src="./img/logo.png" alt="Transaction type" class="transaction-type" width="20px" height="20px">
+    </div>
+    <div class="transaction-to-fro">
+    <p class="trans-name">${transaction.transactionFirstName} ${transaction.transactionLastName}</p> 
+    <p class="trans-time"> ${transaction.transactionTime}PM
+    <span class='trans-date'> ${transaction.transactionDate}</span></p>
+    </div>
+    
+    <div class="transaction-amount">
+    <p>${transaction.transactionAmount}</p>
+    </div>
+    </div>
     `
 recentHistory.insertAdjacentHTML("afterbegin", markup)
 transactionHistory.insertAdjacentHTML('afterbegin', markup)
@@ -329,7 +316,7 @@ login.addEventListener('submit', function(e){
     e.preventDefault();
     accNumber = Number(inputAccNumber.value)
     pin = Number(inputPin.value)
-
+    
     let status = 'failed';
     if( accNumber === acc1.accountNo && pin === acc1.pin){
         status = 'success'
@@ -343,9 +330,22 @@ login.addEventListener('submit', function(e){
     <div class="authentication-status authentication-${authType}">${authText}</div>
     `
     document.querySelector('body').insertAdjacentHTML('afterbegin', html)
-
     
-    setTimeout(function(){
-        document.querySelector('.authentication-status').remove()
-    }, 1000 * 2)
+    
+    setTimeout(() => document.querySelector('.authentication-status').remove()
+    , 2000)
+})
+//////////////NAVIGATE PAGES///////////////
+links.addEventListener('click', function(e){
+    e.preventDefault();
+    const link = e.target
+   
+    if(!link.classList.contains('link'))return
+
+    historyPage.classList.add('hidden')
+
+    linkBtn.forEach(btn => btn === e.target ? btn.closest('.link-item').classList.add('active'): btn.closest('.link-item').classList.remove('active'));
+  
+    pages.forEach(page => page.dataset.tag === e.target.closest('.link-item').dataset.tag ? page.classList.remove('hidden') : page.classList.add('hidden'))
+
 })
