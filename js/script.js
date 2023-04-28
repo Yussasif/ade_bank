@@ -362,6 +362,7 @@ logoutBtn.addEventListener('click', function(e){
     popUPMessage.textContent = 'Click "OK" to Logout'
     home.classList.add('hidden')
     loginForm.classList.remove('hidden')
+    navBar.classList.add('hidden')
 })
 
 //////////////////DISPLAYING EACH TRANSACTIONs//////////////////
@@ -521,6 +522,7 @@ goToLoginBtn.forEach(btn => btn.addEventListener('click', function(e){
     createAccount.classList.add('hidden')
     loginForm.classList.remove('hidden')
     welcome.classList.add('hidden')
+    navBar.classList.add('hidden')
 }))
 
 
