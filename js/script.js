@@ -382,7 +382,7 @@ const getTransactionHistory = function(account){
         </div>
         
         <div class="transaction-amount">
-        <p>$${amount}</p>
+        <p>$${Math.abs(amount)}</p>
         </div>
         </div>
         `
@@ -558,6 +558,7 @@ confirmPin.style.border = 'none'
     
     createAccount.classList.add('hidden')
     welcome.classList.remove('hidden')
+    navBar.classList.add('hidden')
     welcomeArticle.textContent = ''
     
     welcomeMessage = `
