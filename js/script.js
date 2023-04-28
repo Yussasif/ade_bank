@@ -570,6 +570,7 @@ confirmPin.style.border = 'none'
     <p>We have generated your ACcount Number for you from the phone Number you provided</p>
     <p>Accout Number: <span>${phoneNumber.value.slice(1)}</span></p>
     <p>your login pin is the pin you provided during registration.</p>
+    <p>We've provided you a balance of <span>$5000</span> as our welcome gift.</p>
     <p>We hope you enjoy banking with us</p>
     <p>Thanks for choosing <span>ADE BANK</span></p>
     `
