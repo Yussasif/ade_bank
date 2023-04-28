@@ -1,0 +1,52 @@
+.transfer-page{
+    padding: 2vh 3vw;
+}
+.transfer-nav{
+    display: flex;
+    position: absolute;
+    top: 0;
+    height: 50px;
+    background-color: #ccc;
+    width: 100%;
+    left: 0;
+    align-items: center;
+    color: #0000ff;
+    padding: 5px;
+    
+}
+.transfer-nav .back{
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+    font-weight: bolder;
+}
+.transfer-page form{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.transfer-form input{
+    width: 90%;
+    margin: 10px ;
+    margin-top: 0;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 4vw;
+    border: none;
+    padding: 10px;
+}
+.transfer-form label{
+    margin: 10px;
+    margin-bottom: 0px;
+    font-size: 4vw;
+}
+.transfer-form button{
+    background: #0000ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 90%;
+    height: 40px;
+    margin: 10px;
+    padding: 1vh;
+}

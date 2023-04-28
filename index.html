@@ -39,7 +39,7 @@
     
     <!-- <div class="authentication-status authentication-failed">Unauthorized</div> -->
 <!-- ////////////////////REGISTER//////////// -->
-    <form action="create account" class="create-new-account">
+    <form action="create account" class="create-new-account hidden">
         <h4>CREATE ACCOUNT</h4>
         <input class='name input' type="text" id='firstname' placeholder='First Name'>
         <input class='name input' type="text" id='lastname' placeholder='Last Name'>
@@ -48,7 +48,7 @@
         <input class='input pin' type="text" id='create-pin' placeholder='Pin (4 digits)'>
         <input class='input pin' type="text" name="" id="confirm-pin" placeholder='Confirm Pin'>
         <button class='sign-up'>SIGN UP </button>
-        <p>Already have an account? <a id='goto-login'>Login</a></p>
+        <p>Already have an account? <a class='goto-login'>Login</a></p>
 
     </form>
 
@@ -58,7 +58,7 @@
             <input id='acc-Number' type="text" placeholder='Acc Number (10 digits)' value='7018937378'/>
             <input type="password" name="Pin" id="pin" placeholder='Pin' value='1111'>
             <button id='login-btn'>LOGIN</button>
-            <p>Don't have an account? <a id='goto-sign-up'>Sign Up</a></p>
+            <p>Don't have an account? <a class='goto-sign-up'>Sign Up</a></p>
 
         </form>
     </div>
@@ -75,6 +75,21 @@
         </ul>
     </div>
 
+    <section class="welcome hidden">
+       <article class='welcome-article'>
+        <h4>Welcome, <span>firstName</span></h4>
+        <p>Hi, <span>firstname</span> thank you for choosing Adebank.</p>
+        <p>Here we provide you a seamless banking transactions without delay or waste of time, all transactions made with ADE a successful with 5 minutes max</p>
+        <p>We have generated your ACcount Number for you from the phone Number you provided</p>
+        <p>Accout Number: <span>accno</span></p>
+        <p>your login pin is the pin you provided during registration.</p>
+        <p>We hope you enjoy banking with us</p>
+        <p>Thanks for choosing <span>ADE BANK</span></p>
+       </article>
+       <br />
+       <p>Login to access your account</p><button class='goto-login'>Login</button>
+    </section>
+
     <!-- //////////////////////////////////////////////// -->
     <!-- HOME PAGE -->
 
@@ -83,6 +98,8 @@
         <div class="greet">
             <img src="./img/logo.png" alt="profile picture" width="30px" height="auto">
             <h2 class="greet-message">Hi, Yusuf</h2>
+
+            <a class='logout' href=""><img src="./img/logout.png" alt="log out"></a>
         </div>
 
         <div class="balance">
@@ -359,12 +376,21 @@
 
     <!-- ///////////////////////////////////// -->
     <!-- TRANSFER PAGE -->
-    <!-- <form action="transfer" class="transfer-form">
+   <section class="transfer-page hidden">
+    <div class="transfer-nav">
+        <div class='back'>&lt;</div>
+        <h4>Transfer</h4>
+    </div>
+    <form action="transfer" class="transfer-form">
         <label for="recipient account">Account Number</label>
-        <input type="text" name="recipient account" id="recipient-acc" placeholder='10 digits'>
+        <input type="text" name="recipient account" id="recipient-acc" placeholder='10 digits' maxlength='10'>
         <label  for="transfter amount">Amount</label>
         <input type="text" id='transfer-amount' placeholder='$ 100.00 - 5,000,000.00'>
-    </form> -->
+        <label for="Description">Description</label>
+        <input type="text" placeholder='Description' minlength='3' id='description'>
+        <button type='submit'>Confirm</button>
+    </form>
+   </section>
   
 </body>
 </html>

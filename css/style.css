@@ -8,6 +8,8 @@
 @import './history.css';
 @import './login.css';
 @import './register.css';
+@import './welcome.css';
+@import './transfer.css';
 
 *{
     margin: 0;

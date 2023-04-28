@@ -12,6 +12,7 @@
         margin-left: 3vw;
         font-size: 4vw;
         color: #0000ff;
+        margin-right: 50%;
     }
 
     .balance{
@@ -136,4 +137,13 @@
     .loan-transaction .transaction-amount{
         color: #0000ff;
     }
+}
+
+.greet a{
+    color: #0000ff;
+    font-size: 3vw;
+    text-decoration: none;
+}
+.greet a img{
+    width: 20px;
 }
