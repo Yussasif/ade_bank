@@ -13,13 +13,13 @@
     }
     .navbar ul{
         display: flex;
-        height: 10vh;
+        /* height: ; */
         justify-content: space-around;
         align-items: center;
     }
     .navbar ul li{
         list-style-type: none;
-        padding: 2vh 3vw;
+        padding: 1vh 2vw;
         /* margin: 1vw; */
         border-radius: 10px;
 
